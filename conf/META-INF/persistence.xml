@@ -1,0 +1,24 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+  <persistence-unit name="defaultPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <non-jta-data-source>DefaultDS</non-jta-data-source>
+    <class>org.wesignproject.models.Vocabulary</class>
+    <class>org.wesignproject.models.IrrelevantCharacter</class>
+	  <class>org.wesignproject.models.Synonym</class>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.connection.useUnicode" value="true" />
+      <property name="hibernate.connection.characterEncoding" value="UTF-8" />
+      <property name="hibernate.connection.charSet" value="UTF-8" />
+      <property name="hibernate.connection.defaultNChar" value="true" />
+      <property name="hibernate.show_sql" value="true" />
+    </properties>
+  </persistence-unit>
+
+</persistence>

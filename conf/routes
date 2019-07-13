@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+# GET     /                           controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+# GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+POST       /translate                  org.wesignproject.controllers.TranslateController.translateToVideo()
+OPTIONS    /translate                  org.wesignproject.controllers.BaseController.alwaysTrue()
+
+POST       /translateText              org.wesignproject.controllers.TranslateController.translateToText()
+OPTIONS    /translateText              org.wesignproject.controllers.BaseController.alwaysTrue()
+
+GET        /dictionary/:word           org.wesignproject.controllers.DictionaryController.getResponse(word: String)
+GET        /dictionary                 org.wesignproject.controllers.DictionaryController.getAll()
+OPTIONS    /dictionary                 org.wesignproject.controllers.BaseController.alwaysTrue()
+
+GET        /version                    org.wesignproject.controllers.BaseController.getVersion()
+    

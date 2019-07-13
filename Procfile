@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/wesignproject-backend -Dhttp.port=$PORT
